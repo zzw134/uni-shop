@@ -91,6 +91,7 @@
           goods_id
         })
         if (res.meta.status !== 200) return uni.$showMsg()
+        console.log(res.message.goods_introduce);
         res.message.goods_introduce = res.message.goods_introduce.replace(/<img /g, '<img style="display: block;" ')
           .replace(/webp/g, 'jpg')
         this.goods_info = res.message
